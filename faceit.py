@@ -338,7 +338,7 @@ if __name__ == '__main__':
     faceit.add_video('fallon', 'fallon_sesamestreet.mp4', 'https://www.youtube.com/watch?v=SHogg7pJI_M')
     faceit.add_video('fallon', 'fallon_emmastone.mp4', 'https://www.youtube.com/watch?v=bLBSoC_2IY8')
     faceit.add_video('fallon', 'fallon_xfinity.mp4', 'https://www.youtube.com/watch?v=7JwBBZRLgkM')
-    faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')
+    #faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')
     FaceIt.add_model(faceit)
 
     parser = argparse.ArgumentParser()
