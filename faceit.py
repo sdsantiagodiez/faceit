@@ -123,11 +123,11 @@ class FaceIt:
         
         start_time = time.time()
         print('[extract-frames] about to extract_frames for {}, fps {}, length {}s'.format(video_frames_dir, video_clip.fps, video_clip.duration))
-        
+
         if os.path.exists(video_frames_dir):
             print('[extract-frames] frames already exist, skipping extraction: {}'.format(video_frames_dir))
             return
-        print(video_frames_dir)
+
         os.makedirs(video_frames_dir)
         frame_num = 0
         for frame in tqdm.tqdm(video_clip.iter_frames(fps=video['fps']), total = video_clip.fps * video_clip.duration):
@@ -144,11 +144,13 @@ class FaceIt:
 
         start_time = time.time()
         print('[extract-faces] about to extract faces for {}'.format(video_faces_dir))
-        
+
+        print(video_frames_dir)
+
         if os.path.exists(video_faces_dir):
             print('[extract-faces] faces already exist, skipping face extraction: {}'.format(video_faces_dir))
             return
-        
+        print(video_frames_dir)
         os.makedirs(video_faces_dir)
         self._faceswap.extract(self._video_frames_path(video), video_faces_dir, self._people[person]['faces'])
 
