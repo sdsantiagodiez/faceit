@@ -352,7 +352,8 @@ if __name__ == '__main__':
     parser.add_argument('--start-time', type = int, default = 0)
     parser.add_argument('--crop-x', type = int, default = None)
     parser.add_argument('--width', type = int, default = None)
-    parser.add_argument('--side-by-side', action = 'store_true', default = False)    
+    parser.add_argument('--side-by-side', action = 'store_true', default = False)
+	parser.add_argument('--processed-path', nargs='+', help='Path of preprocess folder', default = PROCESSED_PATH)    
     args = parser.parse_args()
 
     faceit = FaceIt.MODELS[args.model]
