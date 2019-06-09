@@ -307,7 +307,7 @@ class FaceSwapInterface:
             self._subparser, "extract", "Extract the faces from a pictures.")
         print(input_dir)
         print(output_dir)
-        args_str = "extract --input-dir '/content/drive/Team\ Drives/GBL\ STEM/Projects/Deep\ fakes/1.Colab/1.Data/4.FaceIt' --output-dir '/content/drive/Team\ Drives/GBL\ STEM/Projects/Deep\ fakes/1.Colab/1.Data/4.FaceIt' --processes 1 --detector cnn --filter {}"
+        args_str = "extract --input-dir ""/content/drive/Team\ Drives/GBL\ STEM/Projects/Deep\ fakes/1.Colab/1.Data/4.FaceIt"" --output-dir ""/content/drive/Team\ Drives/GBL\ STEM/Projects/Deep\ fakes/1.Colab/1.Data/4.FaceIt"" --processes 1 --detector cnn --filter {}"
 
         args_str = args_str.format(filter_path)
         #args_str = args_str.format('data/processed', 'data/processed', filter_path)
