@@ -11,8 +11,8 @@ numpy==1.16.0
 tqdm
 pydot
 graphviz
-#folium==0.2.1
-#imgaug==0.2.5
+folium==0.2.1
+imgaug==0.2.5
 
 
 # Required but installed using other means.
