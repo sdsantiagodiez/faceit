@@ -308,7 +308,7 @@ class FaceSwapInterface:
         extract = ExtractTrainingData(
             self._subparser, "extract", "Extract the faces from a pictures.")
         args_str = "extract --input-dir {} --output-dir {} --processes 1 --detector cnn --filter {}"
-        args_str = args_str.format(input_dir.replace(" ", "\ "), output_dir.replace(" ", "\ "), filter_path.replace(" ", "\ "))
+        args_str = args_str.format(os.path.normpath(input_dir), os.path.normpath(output_dir), filter_path)
         self._run_script(args_str)
 
     def train(self, input_a_dir, input_b_dir, model_dir, gan = False):
