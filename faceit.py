@@ -309,7 +309,6 @@ class FaceSwapInterface:
         print(output_dir)
         args_str = "extract --input-dir {} --output-dir {} --processes 1 --detector cnn --filter {}"
 
-        args_str = args_str.format(filter_path)
         args_str = args_str.format('data/processed', 'data/processed', filter_path)
         #args_str = args_str.format(input_dir, output_dir, filter_path)
         self._run_script(args_str)
