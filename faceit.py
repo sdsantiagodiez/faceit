@@ -357,7 +357,7 @@ if __name__ == '__main__':
     parser.add_argument('--processed-path', nargs='+', help='Path of preprocess folder', default = FaceIt.PROCESSED_PATH)
     args = parser.parse_args()
 
-    FaceIt.PROCESSED_PATH = args['processed-path']
+    FaceIt.PROCESSED_PATH = args['--processed-path']
     
     if args.task == 'preprocess':
         faceit.preprocess()
