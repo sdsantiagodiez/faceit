@@ -354,10 +354,10 @@ if __name__ == '__main__':
     parser.add_argument('--crop-x', type = int, default = None)
     parser.add_argument('--width', type = int, default = None)
     parser.add_argument('--side-by-side', action = 'store_true', default = False)
-    parser.add_argument('--processed-path', nargs='+', help='Path of preprocess folder', default = FaceIt.PROCESSED_PATH)
+    parser.add_argument('--processed_path', nargs='+', help='Path of preprocess folder', default = FaceIt.PROCESSED_PATH)
     args = parser.parse_args()
 
-    FaceIt.PROCESSED_PATH = args['--processed-path']
+    FaceIt.PROCESSED_PATH = args.processed_path
     
     if args.task == 'preprocess':
         faceit.preprocess()
