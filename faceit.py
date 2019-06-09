@@ -358,7 +358,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     FaceIt.PROCESSED_PATH = args.processed_path
-    
+
+    print(FaceIt.PROCESSED_PATH)
     if args.task == 'preprocess':
         faceit.preprocess()
     elif args.task == 'train':
