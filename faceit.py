@@ -127,7 +127,7 @@ class FaceIt:
         if os.path.exists(video_frames_dir):
             print('[extract-frames] frames already exist, skipping extraction: {}'.format(video_frames_dir))
             return
-        
+        print(video_frames_dir)
         os.makedirs(video_frames_dir)
         frame_num = 0
         for frame in tqdm.tqdm(video_clip.iter_frames(fps=video['fps']), total = video_clip.fps * video_clip.duration):
