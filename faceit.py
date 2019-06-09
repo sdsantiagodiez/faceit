@@ -145,12 +145,12 @@ class FaceIt:
         start_time = time.time()
         print('[extract-faces] about to extract faces for {}'.format(video_faces_dir))
 
-        print(video_frames_dir)
+        print(video_faces_dir)
 
         if os.path.exists(video_faces_dir):
             print('[extract-faces] faces already exist, skipping face extraction: {}'.format(video_faces_dir))
             return
-        print(video_frames_dir)
+        print(video_faces_dir)
         os.makedirs(video_faces_dir)
         self._faceswap.extract(self._video_frames_path(video), video_faces_dir, self._people[person]['faces'])
 
