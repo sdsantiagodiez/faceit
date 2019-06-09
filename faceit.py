@@ -145,12 +145,10 @@ class FaceIt:
         start_time = time.time()
         print('[extract-faces] about to extract faces for {}'.format(video_faces_dir))
 
-        print(video_faces_dir)
-
         if os.path.exists(video_faces_dir):
             print('[extract-faces] faces already exist, skipping face extraction: {}'.format(video_faces_dir))
             return
-        print(video_faces_dir)
+
         os.makedirs(video_faces_dir)
         self._faceswap.extract(self._video_frames_path(video), video_faces_dir, self._people[person]['faces'])
 
@@ -307,8 +305,8 @@ class FaceSwapInterface:
     def extract(self, input_dir, output_dir, filter_path):
         extract = ExtractTrainingData(
             self._subparser, "extract", "Extract the faces from a pictures.")
-        args_str = "extract --input-dir {} --output-dir {} --processes 1 --detector cnn --filter {}"
-        args_str = args_str.format(os.path.normpath(input_dir), os.path.normpath(output_dir), filter_path)
+        args_str = "extract --input-dir ""{}"" --output-dir ""{}"" --processes 1 --detector cnn --filter {}"
+        args_str = args_str.format(input_dir, output_dir, filter_path)
         self._run_script(args_str)
 
     def train(self, input_a_dir, input_b_dir, model_dir, gan = False):
