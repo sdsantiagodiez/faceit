@@ -334,7 +334,7 @@ if __name__ == '__main__':
 	#faceit.add_video('oliver', 'oliver_trumpcard.mp4', 'https://www.youtube.com/watch?v=JlxQ3IUWT0I')#deleted
     ##faceit.add_video('oliver', 'oliver_pastor.mp4', 'https://www.youtube.com/watch?v=mUndxpbufkg')#deleted
 	faceit.add_video('oliver', 'oliver_emmy.mp4', 'https://www.youtube.com/watch?v=U7b2qxd3HNg')
-	faceit.add_video('oliver', 'oliver_taxreform.mp4', 'https://www.youtube.com/watch?v=fbyEDM9i0hw')			
+	faceit.add_video('oliver', 'oliver_taxreform.mp4', 'https://www.youtube.com/watch?v=fbyEDM9i0hw')
 	faceit.add_video('oliver', 'oliver_perpetual_exemption.mp4', 'https://www.youtube.com/watch?v=JcPeBAYYuhc')
 	faceit.add_video('oliver', 'oliver_trump_education.mp4', 'https://www.youtube.com/watch?v=8nlRqJqA1B0')
 	"""faceit.add_video('oliver', 'oliver_cookie.mp4', 'https://www.youtube.com/watch?v=H916EVndP_A')#got it
