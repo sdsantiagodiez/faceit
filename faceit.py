@@ -369,19 +369,19 @@ if __name__ == '__main__':
 	parser.add_argument('--side-by-side', action = 'store_true', default = False)
 
 	parser.add_argument('--processed_path', type = str, help='Path of preprocess folder', default = FaceIt.PROCESSED_PATH)
-    args = parser.parse_args()
+	args = parser.parse_args()
 
 
-    FaceIt.PROCESSED_PATH = args.processed_path
+	FaceIt.PROCESSED_PATH = args.processed_path
 
-    if args.task == 'preprocess':
-        faceit.preprocess()
-    elif args.task == 'train':
-        faceit.train()
-    elif args.task == 'convert':
-        if not args.video:
-            print('Need a video to convert. Some ideas: {}'.format(", ".join([video['name'] for video in faceit.all_videos()])))
-        else:
-            faceit.convert(args.video, duration = args.duration, swap_model = args.swap_model, face_filter = args.face_filter, start_time = args.start_time, photos = args.photos, crop_x = args.crop_x, width = args.width, side_by_side = args.side_by_side)
+	if args.task == 'preprocess':
+		faceit.preprocess()
+	elif args.task == 'train':
+		faceit.train()
+	elif args.task == 'convert':
+		if not args.video:
+			print('Need a video to convert. Some ideas: {}'.format(", ".join([video['name'] for video in faceit.all_videos()])))
+		else:
+			faceit.convert(args.video, duration = args.duration, swap_model = args.swap_model, face_filter = args.face_filter, start_time = args.start_time, photos = args.photos, crop_x = args.crop_x, width = args.width, side_by_side = args.side_by_side)
 
 
