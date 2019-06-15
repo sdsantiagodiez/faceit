@@ -331,26 +331,26 @@ if __name__ == '__main__':
     faceit = FaceIt('fallon_to_oliver', 'fallon', 'oliver')
     
 	#John Oliver
-	#faceit.add_video('oliver', 'oliver_trumpcard.mp4', 'https://www.youtube.com/watch?v=JlxQ3IUWT0I')			#deleted
-    ##faceit.add_video('oliver', 'oliver_pastor.mp4', 'https://www.youtube.com/watch?v=mUndxpbufkg')			#deleted
-	faceit.add_video('oliver', 'oliver_emmy.mp4', 'https://www.youtube.com/watch?v=U7b2qxd3HNg')				
+	#faceit.add_video('oliver', 'oliver_trumpcard.mp4', 'https://www.youtube.com/watch?v=JlxQ3IUWT0I')#deleted
+    ##faceit.add_video('oliver', 'oliver_pastor.mp4', 'https://www.youtube.com/watch?v=mUndxpbufkg')#deleted
+	faceit.add_video('oliver', 'oliver_emmy.mp4', 'https://www.youtube.com/watch?v=U7b2qxd3HNg')
 	faceit.add_video('oliver', 'oliver_taxreform.mp4', 'https://www.youtube.com/watch?v=fbyEDM9i0hw')			
-	faceit.add_video('oliver', 'oliver_perpetual_exemption.mp4', 'https://www.youtube.com/watch?v=JcPeBAYYuhc')	
-	faceit.add_video('oliver', 'oliver_trump_education.mp4', 'https://www.youtube.com/watch?v=8nlRqJqA1B0')		
-	"""faceit.add_video('oliver', 'oliver_cookie.mp4', 'https://www.youtube.com/watch?v=H916EVndP_A')			#got it
-    faceit.add_video('oliver', 'oliver_lorelai.mp4', 'https://www.youtube.com/watch?v=G1xP2f1_1Jg')				#got it
-    """																											
-																												
+	faceit.add_video('oliver', 'oliver_perpetual_exemption.mp4', 'https://www.youtube.com/watch?v=JcPeBAYYuhc')
+	faceit.add_video('oliver', 'oliver_trump_education.mp4', 'https://www.youtube.com/watch?v=8nlRqJqA1B0')
+	"""faceit.add_video('oliver', 'oliver_cookie.mp4', 'https://www.youtube.com/watch?v=H916EVndP_A')#got it
+    faceit.add_video('oliver', 'oliver_lorelai.mp4', 'https://www.youtube.com/watch?v=G1xP2f1_1Jg')#got it
+    """			
+	
 	#Jimmy Fallon																								
-	faceit.add_video('fallon', 'fallon_mom.mp4', 'https://www.youtube.com/watch?v=gjXrm2Q-te4')					
-    faceit.add_video('fallon', 'fallon_charlottesville.mp4', 'https://www.youtube.com/watch?v=E9TJsw67OmE')		
-    """faceit.add_video('fallon', 'fallon_dakota.mp4', 'https://www.youtube.com/watch?v=tPtMP_NAMz0')			#got it
-    faceit.add_video('fallon', 'fallon_single.mp4', 'https://www.youtube.com/watch?v=xfFVuXN0FSI')				#got it
-    faceit.add_video('fallon', 'fallon_sesamestreet.mp4', 'https://www.youtube.com/watch?v=SHogg7pJI_M')		#got it
-    faceit.add_video('fallon', 'fallon_emmastone.mp4', 'https://www.youtube.com/watch?v=bLBSoC_2IY8')			#got it
-    faceit.add_video('fallon', 'fallon_xfinity.mp4', 'https://www.youtube.com/watch?v=7JwBBZRLgkM') 			#got it
+	faceit.add_video('fallon', 'fallon_mom.mp4', 'https://www.youtube.com/watch?v=gjXrm2Q-te4')
+    faceit.add_video('fallon', 'fallon_charlottesville.mp4', 'https://www.youtube.com/watch?v=E9TJsw67OmE')
+    """faceit.add_video('fallon', 'fallon_dakota.mp4', 'https://www.youtube.com/watch?v=tPtMP_NAMz0')#got it
+    faceit.add_video('fallon', 'fallon_single.mp4', 'https://www.youtube.com/watch?v=xfFVuXN0FSI')#got it
+    faceit.add_video('fallon', 'fallon_sesamestreet.mp4', 'https://www.youtube.com/watch?v=SHogg7pJI_M')#got it
+    faceit.add_video('fallon', 'fallon_emmastone.mp4', 'https://www.youtube.com/watch?v=bLBSoC_2IY8')#got it
+    faceit.add_video('fallon', 'fallon_xfinity.mp4', 'https://www.youtube.com/watch?v=7JwBBZRLgkM')#got it
     """
-    #faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')				#deleted
+    #faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')#deleted
     FaceIt.add_model(faceit)
 
     parser = argparse.ArgumentParser()
