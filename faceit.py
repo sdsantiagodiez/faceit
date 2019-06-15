@@ -307,7 +307,7 @@ class FaceSwapInterface:
             self._subparser, "extract", "Extract the faces from a pictures.")
         print(input_dir)
         print(output_dir)
-        args_str = "extract --input-dir {} --output-dir {} --processes 1 --detector cnn --filter {}"
+        args_str = "extract;--input-dir;{};--output-dir;{};--processes;1;--detector;cnn;--filter;{}"
 
         args_str = args_str.format(input_dir, output_dir, filter_path)
         self._run_script(args_str)
@@ -323,7 +323,7 @@ class FaceSwapInterface:
         self._run_script(args_str)
 
     def _run_script(self, args_str):
-        args = self._parser.parse_args(args_str.split(' '))
+        args = self._parser.parse_args(args_str.split(';'))
         args.func(args)
 
 
