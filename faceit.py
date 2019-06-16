@@ -182,8 +182,9 @@ class FaceIt:
     def train(self, use_gan = False):
         # Setup directory structure for model, and create one director for person_a faces, and
         # another for person_b faces containing symlinks to all faces.
+
         print("Debug 1")
-		if not os.path.exists(self._model_path(use_gan)):
+        if not os.path.exists(self._model_path(use_gan)):
             os.makedirs(self._model_path(use_gan))
 
         if os.path.exists(self._model_data_path()):
@@ -322,7 +323,7 @@ class FaceSwapInterface:
         args_str = "train***--input-A***{}***--input-B***{}***--model-dir***{}***--trainer***{}***--batch-size***{}***--write-image"
         args_str = args_str.format(input_a_dir, input_b_dir, model_dir, model_type, 512)
         print(args_str)
-		self._run_script(args_str)
+        self._run_script(args_str)
 
     def _run_script(self, args_str):
         args = self._parser.parse_args(args_str.split('***'))
@@ -330,68 +331,68 @@ class FaceSwapInterface:
 
 
 if __name__ == '__main__':
-	faceit = FaceIt('fallon_to_oliver', 'fallon', 'oliver')
-	
-	#John Oliver
-	#faceit.add_video('oliver', 'oliver_trumpcard.mp4', 'https://www.youtube.com/watch?v=JlxQ3IUWT0I')#deleted
-	##faceit.add_video('oliver', 'oliver_pastor.mp4', 'https://www.youtube.com/watch?v=mUndxpbufkg')#deleted
-	faceit.add_video('oliver', 'oliver_emmy.mp4', 'https://www.youtube.com/watch?v=U7b2qxd3HNg')
-	faceit.add_video('oliver', 'oliver_taxreform.mp4', 'https://www.youtube.com/watch?v=fbyEDM9i0hw')
-	faceit.add_video('oliver', 'oliver_perpetual_exemption.mp4', 'https://www.youtube.com/watch?v=JcPeBAYYuhc')
-	faceit.add_video('oliver', 'oliver_trump_education.mp4', 'https://www.youtube.com/watch?v=8nlRqJqA1B0')
-	
-	faceit.add_video('oliver', 'oliver_cookie.mp4', 'https://www.youtube.com/watch?v=H916EVndP_A')#got it
-	faceit.add_video('oliver', 'oliver_lorelai.mp4', 'https://www.youtube.com/watch?v=G1xP2f1_1Jg')#got it
-	
-	
-	#Jimmy Fallon
-	faceit.add_video('fallon', 'fallon_mom.mp4', 'https://www.youtube.com/watch?v=gjXrm2Q-te4')
-	faceit.add_video('fallon', 'fallon_charlottesville.mp4', 'https://www.youtube.com/watch?v=E9TJsw67OmE')
-	
-	faceit.add_video('fallon', 'fallon_dakota.mp4', 'https://www.youtube.com/watch?v=tPtMP_NAMz0')#got it
-	faceit.add_video('fallon', 'fallon_single.mp4', 'https://www.youtube.com/watch?v=xfFVuXN0FSI')#got it
-	faceit.add_video('fallon', 'fallon_sesamestreet.mp4', 'https://www.youtube.com/watch?v=SHogg7pJI_M')#got it
-	faceit.add_video('fallon', 'fallon_emmastone.mp4', 'https://www.youtube.com/watch?v=bLBSoC_2IY8')#got it
-	faceit.add_video('fallon', 'fallon_xfinity.mp4', 'https://www.youtube.com/watch?v=7JwBBZRLgkM')#got it
-	
-	#faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')#deleted
-	FaceIt.add_model(faceit)
+    faceit = FaceIt('fallon_to_oliver', 'fallon', 'oliver')
 
-	parser = argparse.ArgumentParser()
-	parser.add_argument('task', choices = ['preprocess', 'train', 'convert'])
-	parser.add_argument('model', choices = FaceIt.MODELS.keys())
-	parser.add_argument('video', nargs = '?')
-	parser.add_argument('--duration', type = int, default = None)
-	parser.add_argument('--photos', action = 'store_true', default = False)    
-	parser.add_argument('--swap-model', action = 'store_true', default = False)
-	parser.add_argument('--face-filter', action = 'store_true', default = False)
-	parser.add_argument('--start-time', type = int, default = 0)
-	parser.add_argument('--crop-x', type = int, default = None)
-	parser.add_argument('--width', type = int, default = None)
-	parser.add_argument('--side-by-side', action = 'store_true', default = False)
+    #John Oliver
+    #faceit.add_video('oliver', 'oliver_trumpcard.mp4', 'https://www.youtube.com/watch?v=JlxQ3IUWT0I')#deleted
+    # #faceit.add_video('oliver', 'oliver_pastor.mp4', 'https://www.youtube.com/watch?v=mUndxpbufkg')#deleted
+    faceit.add_video('oliver', 'oliver_emmy.mp4', 'https://www.youtube.com/watch?v=U7b2qxd3HNg')
+    faceit.add_video('oliver', 'oliver_taxreform.mp4', 'https://www.youtube.com/watch?v=fbyEDM9i0hw')
+    faceit.add_video('oliver', 'oliver_perpetual_exemption.mp4', 'https://www.youtube.com/watch?v=JcPeBAYYuhc')
+    faceit.add_video('oliver', 'oliver_trump_education.mp4', 'https://www.youtube.com/watch?v=8nlRqJqA1B0')
 
-	parser.add_argument('--video_path', type = str, help='Path of video folder', default = FaceIt.VIDEO_PATH)
-	parser.add_argument('--person_path', type = str, help='Path of person folder', default = FaceIt.PERSON_PATH)
-	parser.add_argument('--processed_path', type = str, help='Path of preprocess folder', default = FaceIt.PROCESSED_PATH)
-	parser.add_argument('--output_path', type = str, help='Path of output folder', default = FaceIt.OUTPUT_PATH)
-	parser.add_argument('--model_path', type = str, help='Path of model folder', default = FaceIt.MODEL_PATH)
-		
-	args = parser.parse_args()
+    faceit.add_video('oliver', 'oliver_cookie.mp4', 'https://www.youtube.com/watch?v=H916EVndP_A')#got it
+    faceit.add_video('oliver', 'oliver_lorelai.mp4', 'https://www.youtube.com/watch?v=G1xP2f1_1Jg')#got it
 
-	FaceIt.VIDEO_PATH = args.video_path
-	FaceIt.PERSON_PATH = args.person_path
-	FaceIt.PROCESSED_PATH = args.processed_path
-	FaceIt.OUTPUT_PATH = args.output_path
-	FaceIt.MODEL_PATH = args.model_path
 
-	if args.task == 'preprocess':
-		faceit.preprocess()
-	elif args.task == 'train':
-		faceit.train()
-	elif args.task == 'convert':
-		if not args.video:
-			print('Need a video to convert. Some ideas: {}'.format(", ".join([video['name'] for video in faceit.all_videos()])))
-		else:
-			faceit.convert(args.video, duration = args.duration, swap_model = args.swap_model, face_filter = args.face_filter, start_time = args.start_time, photos = args.photos, crop_x = args.crop_x, width = args.width, side_by_side = args.side_by_side)
+    #Jimmy Fallon
+    faceit.add_video('fallon', 'fallon_mom.mp4', 'https://www.youtube.com/watch?v=gjXrm2Q-te4')
+    faceit.add_video('fallon', 'fallon_charlottesville.mp4', 'https://www.youtube.com/watch?v=E9TJsw67OmE')
+
+    faceit.add_video('fallon', 'fallon_dakota.mp4', 'https://www.youtube.com/watch?v=tPtMP_NAMz0')#got it
+    faceit.add_video('fallon', 'fallon_single.mp4', 'https://www.youtube.com/watch?v=xfFVuXN0FSI')#got it
+    faceit.add_video('fallon', 'fallon_sesamestreet.mp4', 'https://www.youtube.com/watch?v=SHogg7pJI_M')#got it
+    faceit.add_video('fallon', 'fallon_emmastone.mp4', 'https://www.youtube.com/watch?v=bLBSoC_2IY8')#got it
+    faceit.add_video('fallon', 'fallon_xfinity.mp4', 'https://www.youtube.com/watch?v=7JwBBZRLgkM')#got it
+
+    #faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')#deleted
+    FaceIt.add_model(faceit)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('task', choices = ['preprocess', 'train', 'convert'])
+    parser.add_argument('model', choices = FaceIt.MODELS.keys())
+    parser.add_argument('video', nargs = '?')
+    parser.add_argument('--duration', type = int, default = None)
+    parser.add_argument('--photos', action = 'store_true', default = False)
+    parser.add_argument('--swap-model', action = 'store_true', default = False)
+    parser.add_argument('--face-filter', action = 'store_true', default = False)
+    parser.add_argument('--start-time', type = int, default = 0)
+    parser.add_argument('--crop-x', type = int, default = None)
+    parser.add_argument('--width', type = int, default = None)
+    parser.add_argument('--side-by-side', action = 'store_true', default = False)
+
+    parser.add_argument('--video_path', type = str, help='Path of video folder', default = FaceIt.VIDEO_PATH)
+    parser.add_argument('--person_path', type = str, help='Path of person folder', default = FaceIt.PERSON_PATH)
+    parser.add_argument('--processed_path', type = str, help='Path of preprocess folder', default = FaceIt.PROCESSED_PATH)
+    parser.add_argument('--output_path', type = str, help='Path of output folder', default = FaceIt.OUTPUT_PATH)
+    parser.add_argument('--model_path', type = str, help='Path of model folder', default = FaceIt.MODEL_PATH)
+
+    args = parser.parse_args()
+
+    FaceIt.VIDEO_PATH = args.video_path
+    FaceIt.PERSON_PATH = args.person_path
+    FaceIt.PROCESSED_PATH = args.processed_path
+    FaceIt.OUTPUT_PATH = args.output_path
+    FaceIt.MODEL_PATH = args.model_path
+
+    if args.task == 'preprocess':
+        faceit.preprocess()
+    elif args.task == 'train':
+        faceit.train()
+    elif args.task == 'convert':
+        if not args.video:
+            print('Need a video to convert. Some ideas: {}'.format(", ".join([video['name'] for video in faceit.all_videos()])))
+        else:
+            faceit.convert(args.video, duration = args.duration, swap_model = args.swap_model, face_filter = args.face_filter, start_time = args.start_time, photos = args.photos, crop_x = args.crop_x, width = args.width, side_by_side = args.side_by_side)
 
 
