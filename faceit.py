@@ -103,7 +103,7 @@ class FaceIt:
         return os.path.join(path, self._name)
 
     def _model_data_path(self):
-        return os.path.join(FaceIt.MODEL_PATH, "model_data_" + self._name)
+        return os.path.join("/content/faceit/models/", "model_data_" + self._name)
         #return os.path.join(FaceIt.PROCESSED_PATH, "model_data_" + self._name)
     
     def _model_person_data_path(self, person):
