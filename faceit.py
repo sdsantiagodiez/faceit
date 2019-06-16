@@ -103,7 +103,8 @@ class FaceIt:
         return os.path.join(path, self._name)
 
     def _model_data_path(self):
-        return os.path.join(FaceIt.PROCESSED_PATH, "model_data_" + self._name)
+        return os.path.join(FaceIt.MODEL_PATH, "model_data_" + self._name)
+        #return os.path.join(FaceIt.PROCESSED_PATH, "model_data_" + self._name)
     
     def _model_person_data_path(self, person):
         return os.path.join(self._model_data_path(), person)
@@ -183,7 +184,6 @@ class FaceIt:
         # Setup directory structure for model, and create one director for person_a faces, and
         # another for person_b faces containing symlinks to all faces.
 
-        print("Debug 1")
         if not os.path.exists(self._model_path(use_gan)):
             os.makedirs(self._model_path(use_gan))
 
@@ -307,8 +307,6 @@ class FaceSwapInterface:
     def extract(self, input_dir, output_dir, filter_path):
         extract = ExtractTrainingData(
             self._subparser, "extract", "Extract the faces from a pictures.")
-        print(input_dir)
-        print(output_dir)
         args_str = "extract***--input-dir***{}***--output-dir***{}***--processes***1***--detector***cnn***--filter***{}"
 
         args_str = args_str.format(input_dir, output_dir, filter_path)
@@ -322,7 +320,7 @@ class FaceSwapInterface:
             self._subparser, "train", "This command trains the model for the two faces A and B.")
         args_str = "train***--input-A***{}***--input-B***{}***--model-dir***{}***--trainer***{}***--batch-size***{}***--write-image"
         args_str = args_str.format(input_a_dir, input_b_dir, model_dir, model_type, 512)
-        print(args_str)
+
         self._run_script(args_str)
 
     def _run_script(self, args_str):
@@ -371,7 +369,6 @@ if __name__ == '__main__':
     parser.add_argument('--width', type = int, default = None)
     parser.add_argument('--side-by-side', action = 'store_true', default = False)
 
-    print("debug 0.1")
     parser.add_argument('--video_path', type = str, help='Path of video folder', default = FaceIt.VIDEO_PATH)
     parser.add_argument('--person_path', type = str, help='Path of person folder', default = FaceIt.PERSON_PATH)
     parser.add_argument('--processed_path', type = str, help='Path of process folder', default = FaceIt.PROCESSED_PATH)
@@ -386,7 +383,6 @@ if __name__ == '__main__':
     FaceIt.OUTPUT_PATH = args.output_path
     FaceIt.MODEL_PATH = args.model_path
 
-    print("debug 0.2")
     if args.task == 'preprocess':
         faceit.preprocess()
     elif args.task == 'train':
