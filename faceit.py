@@ -373,7 +373,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--video_path', type = str, help='Path of video folder', default = FaceIt.VIDEO_PATH)
     parser.add_argument('--person_path', type = str, help='Path of person folder', default = FaceIt.PERSON_PATH)
-    parser.add_argument('--processed_path', type = str, help='Path of preprocess folder', default = FaceIt.PROCESSED_PATH)
+    parser.add_argument('--processed_path', type = str, help='Path of process folder', default = FaceIt.PROCESSED_PATH)
     parser.add_argument('--output_path', type = str, help='Path of output folder', default = FaceIt.OUTPUT_PATH)
     parser.add_argument('--model_path', type = str, help='Path of model folder', default = FaceIt.MODEL_PATH)
 
@@ -385,6 +385,7 @@ if __name__ == '__main__':
     FaceIt.OUTPUT_PATH = args.output_path
     FaceIt.MODEL_PATH = args.model_path
 
+    print("debug 0")
     if args.task == 'preprocess':
         faceit.preprocess()
     elif args.task == 'train':
