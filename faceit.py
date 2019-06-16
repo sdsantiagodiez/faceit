@@ -182,7 +182,8 @@ class FaceIt:
     def train(self, use_gan = False):
         # Setup directory structure for model, and create one director for person_a faces, and
         # another for person_b faces containing symlinks to all faces.
-        if not os.path.exists(self._model_path(use_gan)):
+        print("Debug 1")
+		if not os.path.exists(self._model_path(use_gan)):
             os.makedirs(self._model_path(use_gan))
 
         if os.path.exists(self._model_data_path()):
@@ -320,7 +321,8 @@ class FaceSwapInterface:
             self._subparser, "train", "This command trains the model for the two faces A and B.")
         args_str = "train***--input-A***{}***--input-B***{}***--model-dir***{}***--trainer***{}***--batch-size***{}***--write-image"
         args_str = args_str.format(input_a_dir, input_b_dir, model_dir, model_type, 512)
-        self._run_script(args_str)
+        print(args_str)
+		self._run_script(args_str)
 
     def _run_script(self, args_str):
         args = self._parser.parse_args(args_str.split('***'))
