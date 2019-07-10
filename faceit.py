@@ -178,10 +178,6 @@ class FaceIt:
         for face_file in os.listdir(self._video_faces_path(video)):
             target_file = os.path.join(self._model_person_data_path(person), video['name'] + "_" + face_file)
             face_file_path = os.path.join(os.getcwd(), self._video_faces_path(video), face_file)
-
-            print(face_file)
-            print(target_file)
-            print(face_file_path)
             os.symlink(face_file_path, target_file)
 
     def train(self, use_gan = False):
