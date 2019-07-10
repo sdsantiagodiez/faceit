@@ -176,6 +176,7 @@ class FaceIt:
         if isinstance(video, str):
             video = { 'name' : video }
         for face_file in os.listdir(self._video_faces_path(video)):
+            print(face_file)
             target_file = os.path.join(self._model_person_data_path(person), video['name'] + "_" + face_file)
             face_file_path = os.path.join(os.getcwd(), self._video_faces_path(video), face_file)
             os.symlink(face_file_path, target_file)
