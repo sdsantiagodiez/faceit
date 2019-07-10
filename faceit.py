@@ -166,7 +166,6 @@ class FaceIt:
         os.makedirs(photo_faces_dir)
         self._faceswap.extract(self._video_path({ 'name' : photo_dir }), photo_faces_dir, self._people[person]['faces'])
 
-
     def preprocess(self):
         self.fetch()
         self.extract_frames()
@@ -329,8 +328,10 @@ class FaceSwapInterface:
 
 
 if __name__ == '__main__':
-    faceit = FaceIt('fallon_to_oliver', 'fallon', 'oliver')
+    faceit = FaceIt('fallon_to_hp', 'fallon', 'hp')
 
+
+    """
     #John Oliver
     #faceit.add_video('oliver', 'oliver_trumpcard.mp4', 'https://www.youtube.com/watch?v=JlxQ3IUWT0I')#deleted
     # #faceit.add_video('oliver', 'oliver_pastor.mp4', 'https://www.youtube.com/watch?v=mUndxpbufkg')#deleted
@@ -341,7 +342,7 @@ if __name__ == '__main__':
 
     faceit.add_video('oliver', 'oliver_cookie.mp4', 'https://www.youtube.com/watch?v=H916EVndP_A')#got it
     faceit.add_video('oliver', 'oliver_lorelai.mp4', 'https://www.youtube.com/watch?v=G1xP2f1_1Jg')#got it
-
+    """
 
     #Jimmy Fallon
     faceit.add_video('fallon', 'fallon_mom.mp4', 'https://www.youtube.com/watch?v=gjXrm2Q-te4')
