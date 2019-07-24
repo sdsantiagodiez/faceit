@@ -120,6 +120,7 @@ class FaceIt:
 
     def _extract_frames(self, person, video):
         video_frames_dir = self._video_frames_path(video)
+        print(self._video_path(video))
         video_clip = VideoFileClip(self._video_path(video))
         
         start_time = time.time()
@@ -167,7 +168,7 @@ class FaceIt:
         self._faceswap.extract(self._video_path({ 'name' : photo_dir }), photo_faces_dir, self._people[person]['faces'])
 
     def preprocess(self):
-        self.fetch()
+        #self.fetch()
         self.extract_frames()
         self.extract_faces()
     
@@ -331,7 +332,6 @@ class FaceSwapInterface:
 if __name__ == '__main__':
     faceit = FaceIt('fallon_to_hp', 'fallon', 'hp')
 
-
     """
     #John Oliver
     #faceit.add_video('oliver', 'oliver_trumpcard.mp4', 'https://www.youtube.com/watch?v=JlxQ3IUWT0I')#deleted
@@ -355,7 +355,18 @@ if __name__ == '__main__':
     faceit.add_video('fallon', 'fallon_emmastone.mp4', 'https://www.youtube.com/watch?v=bLBSoC_2IY8')#got it
     faceit.add_video('fallon', 'fallon_xfinity.mp4', 'https://www.youtube.com/watch?v=7JwBBZRLgkM')#got it
 
-    faceit.add_video('hp', 'hp_video.mp4', '')  # got it
+
+    faceit.add_video('hp', 'hp_1_zf.mp4', '')  # got it
+    faceit.add_video('hp', 'hp_2_home-made-1.mov', '')  # got it
+    faceit.add_video('hp', 'hp_3_home-made-2.mov', '')  # got it
+    faceit.add_video('hp', 'hp_4_home-made-3.mov', '')  # got it
+    faceit.add_video('hp', 'hp_5_home-made-4.mov', '')  # got it
+    faceit.add_video('hp', 'hp_6_home-made-5.mov', '')  # got it
+    faceit.add_video('hp', 'hp_7_home-made-6.mov', '')  # got it
+    faceit.add_video('hp', 'hp_8_inside-tax-1.mp4', '')  # got it
+    faceit.add_video('hp', 'hp_9_inside-tax-2.mp4', '')  # got it
+    faceit.add_video('hp', 'hp_10_interview.mp4', '')  # got it
+
     #faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')#deleted
     FaceIt.add_model(faceit)
 
