@@ -330,7 +330,7 @@ class FaceSwapInterface:
 
 
 if __name__ == '__main__':
-    faceit = FaceIt('fallon_to_hp', 'fallon', 'hp')
+    faceit = FaceIt('benicio_to_hp', 'benicio', 'hp')
 
     """
     #John Oliver
@@ -344,7 +344,7 @@ if __name__ == '__main__':
     faceit.add_video('oliver', 'oliver_cookie.mp4', 'https://www.youtube.com/watch?v=H916EVndP_A')#got it
     faceit.add_video('oliver', 'oliver_lorelai.mp4', 'https://www.youtube.com/watch?v=G1xP2f1_1Jg')#got it
     """
-
+    """
     #Jimmy Fallon
     faceit.add_video('fallon', 'fallon_mom.mp4', 'https://www.youtube.com/watch?v=gjXrm2Q-te4')
     faceit.add_video('fallon', 'fallon_charlottesville.mp4', 'https://www.youtube.com/watch?v=E9TJsw67OmE')
@@ -354,7 +354,16 @@ if __name__ == '__main__':
     faceit.add_video('fallon', 'fallon_sesamestreet.mp4', 'https://www.youtube.com/watch?v=SHogg7pJI_M')#got it
     faceit.add_video('fallon', 'fallon_emmastone.mp4', 'https://www.youtube.com/watch?v=bLBSoC_2IY8')#got it
     faceit.add_video('fallon', 'fallon_xfinity.mp4', 'https://www.youtube.com/watch?v=7JwBBZRLgkM')#got it
-
+    """
+    # Benicio del Toro
+    faceit.add_video('benicio', 'benicio_alone.mp4', 'https://www.youtube.com/watch?v=YQKNZyGALiM')
+    faceit.add_video('benicio', 'benicio_smith.mp4', 'https://www.youtube.com/watch?v=13TznUfhdgc')
+    faceit.add_video('benicio', 'benicio_fallon.mp4', 'https://www.youtube.com/watch?v=8LO1MEpyBTc')
+    faceit.add_video('benicio', 'benicio_vfair.mp4', 'https://www.youtube.com/watch?v=12CczhfiEo0')
+    faceit.add_video('benicio', 'benicio_chearg.mp4', 'https://www.youtube.com/watch?v=YRhctJRmFK0')
+    faceit.add_video('benicio', 'benicio_usualsuspect.mp4', 'https://www.youtube.com/watch?v=zGt-aCQqfkA')
+    faceit.add_video('benicio', 'benicio_usualsuspect.mp4', 'https://www.youtube.com/watch?v=9aRx0_mkh4o')
+    
 
     faceit.add_video('hp', 'hp_1_zf.mp4', '')  # got it
     faceit.add_video('hp', 'hp_2_home-made-1.mov', '')  # got it
