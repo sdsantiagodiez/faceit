@@ -379,7 +379,7 @@ if __name__ == '__main__':
     FaceIt.add_model(faceit)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('task', choices = ['    ', 'train', 'convert'])
+    parser.add_argument('task', choices = ['preprocess', 'train', 'convert'])
     parser.add_argument('model', choices = FaceIt.MODELS.keys())
     parser.add_argument('video', nargs = '?')
     parser.add_argument('--duration', type = int, default = None)
