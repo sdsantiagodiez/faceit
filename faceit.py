@@ -168,7 +168,7 @@ class FaceIt:
         self._faceswap.extract(self._video_path({ 'name' : photo_dir }), photo_faces_dir, self._people[person]['faces'])
 
     def preprocess(self):
-        self.fetch()
+        # self.fetch()
         self.extract_frames()
         self.extract_faces()
     
@@ -379,7 +379,7 @@ if __name__ == '__main__':
     FaceIt.add_model(faceit)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('task', choices = ['preprocess', 'train', 'convert'])
+    parser.add_argument('task', choices = ['    ', 'train', 'convert'])
     parser.add_argument('model', choices = FaceIt.MODELS.keys())
     parser.add_argument('video', nargs = '?')
     parser.add_argument('--duration', type = int, default = None)
