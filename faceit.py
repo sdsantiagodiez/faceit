@@ -168,7 +168,7 @@ class FaceIt:
         self._faceswap.extract(self._video_path({ 'name' : photo_dir }), photo_faces_dir, self._people[person]['faces'])
 
     def preprocess(self):
-        #self.fetch()
+        # self.fetch()
         self.extract_frames()
         self.extract_faces()
     
@@ -362,9 +362,8 @@ if __name__ == '__main__':
     faceit.add_video('benicio', 'benicio_vfair.mp4', 'https://www.youtube.com/watch?v=12CczhfiEo0')
     faceit.add_video('benicio', 'benicio_chearg.mp4', 'https://www.youtube.com/watch?v=YRhctJRmFK0')
     faceit.add_video('benicio', 'benicio_usualsuspect.mp4', 'https://www.youtube.com/watch?v=zGt-aCQqfkA')
-    faceit.add_video('benicio', 'benicio_usualsuspect.mp4', 'https://www.youtube.com/watch?v=9aRx0_mkh4o')
+    faceit.add_video('benicio', 'benicio_vice.mp4', 'https://www.youtube.com/watch?v=9aRx0_mkh4o')
     
-
     faceit.add_video('hp', 'hp_1_zf.mp4', '')  # got it
     faceit.add_video('hp', 'hp_2_home-made-1.mov', '')  # got it
     faceit.add_video('hp', 'hp_3_home-made-2.mov', '')  # got it
