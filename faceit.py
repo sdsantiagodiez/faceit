@@ -369,7 +369,7 @@ if __name__ == '__main__':
     faceit.add_video('hp', 'hp_3_home-made-2.mov', '')  # got it
     faceit.add_video('hp', 'hp_4_home-made-3.mov', '')  # got it
     faceit.add_video('hp', 'hp_5_home-made-4.mov', '')  # got it
-    faceit.add_video('hp', 'hp_6_home-made-5.mov', '')  # got it
+    # faceit.add_video('hp', 'hp_6_home-made-5.mov', '')  # got it
     faceit.add_video('hp', 'hp_7_home-made-6.mov', '')  # got it
     faceit.add_video('hp', 'hp_8_inside-tax-1.mp4', '')  # got it
     faceit.add_video('hp', 'hp_9_inside-tax-2.mp4', '')  # got it
