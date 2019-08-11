@@ -103,7 +103,7 @@ class FaceIt:
         return os.path.join(path, self._name)
 
     def _model_data_path(self):
-        return os.path.join("/content/faceit/models/", "model_data_" + self._name)
+        return os.path.join("/data/models/", "model_data_" + self._name)
         #return os.path.join(FaceIt.PROCESSED_PATH, "model_data_" + self._name)
     
     def _model_person_data_path(self, person):
@@ -369,7 +369,7 @@ if __name__ == '__main__':
     faceit.add_video('hp', 'hp_3_home-made-2.mov', '')  # got it
     faceit.add_video('hp', 'hp_4_home-made-3.mov', '')  # got it
     faceit.add_video('hp', 'hp_5_home-made-4.mov', '')  # got it
-    # faceit.add_video('hp', 'hp_6_home-made-5.mov', '')  # got it
+    faceit.add_video('hp', 'hp_6_home-made-5.mov', '')  # got it
     faceit.add_video('hp', 'hp_7_home-made-6.mov', '')  # got it
     faceit.add_video('hp', 'hp_8_inside-tax-1.mp4', '')  # got it
     faceit.add_video('hp', 'hp_9_inside-tax-2.mp4', '')  # got it
