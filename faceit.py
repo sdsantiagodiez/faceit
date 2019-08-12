@@ -168,7 +168,7 @@ class FaceIt:
         self._faceswap.extract(self._video_path({ 'name' : photo_dir }), photo_faces_dir, self._people[person]['faces'])
 
     def preprocess(self):
-        # self.fetch()
+        self.fetch()
         self.extract_frames()
         self.extract_faces()
     
