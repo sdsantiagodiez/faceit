@@ -330,26 +330,26 @@ class FaceSwapInterface:
 
 
 if __name__ == '__main__':
-    faceit = FaceIt('roy_to_jj', 'roy', 'jj')
+    faceit = FaceIt('jj_to_roy', 'jj', 'roy')
 
     
-    # Roy Weathers
+    
     faceit.add_video('jj', 'jj_01.mp4', '')
     faceit.add_video('jj', 'jj_02.mp4', '')
     faceit.add_video('jj', 'jj_03.mp4', '')
     faceit.add_video('jj', 'jj_04.mp4', '')
     faceit.add_video('jj', 'jj_05.mp4', '')
     
-    faceit.add_video('roy', 'rw_10.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_09.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_08.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_07.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_06.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_05.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_04.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_03.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_02.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_01.mp4', '')  # got it
+    faceit.add_video('roy', 'rw_10.mp4', '')
+    faceit.add_video('roy', 'rw_09.mp4', '')
+    faceit.add_video('roy', 'rw_08.mp4', '')
+    faceit.add_video('roy', 'rw_07.mp4', '')
+    faceit.add_video('roy', 'rw_06.mp4', '')  
+    faceit.add_video('roy', 'rw_05.mp4', '')  
+    faceit.add_video('roy', 'rw_04.mp4', '')
+    faceit.add_video('roy', 'rw_03.mp4', '')
+    faceit.add_video('roy', 'rw_02.mp4', '')
+    faceit.add_video('roy', 'rw_01.mp4', '')
 
     #faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')#deleted
     FaceIt.add_model(faceit)
