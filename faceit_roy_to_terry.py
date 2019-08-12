@@ -330,7 +330,7 @@ class FaceSwapInterface:
 
 
 if __name__ == '__main__':
-    faceit = FaceIt('roy_to_jj', 'roy', 'jj')
+    faceit = FaceIt('roy_to_terry', 'roy', 'terry')
 
     # Roy Weathers
     faceit.add_video('terry', 'terry_01.mp4', 'https://www.youtube.com/watch?v=xhs8tf1v__ws')
