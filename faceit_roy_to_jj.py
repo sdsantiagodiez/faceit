@@ -334,11 +334,11 @@ if __name__ == '__main__':
 
     
     
-    faceit.add_video('jj', 'jj_01.mp4', '')
-    faceit.add_video('jj', 'jj_02.mp4', '')
-    faceit.add_video('jj', 'jj_03.mp4', '')
-    faceit.add_video('jj', 'jj_04.mp4', '')
-    faceit.add_video('jj', 'jj_05.mp4', '')
+    # faceit.add_video('jj', 'jj_01.mp4', '')
+    # faceit.add_video('jj', 'jj_02.mp4', '')
+    # faceit.add_video('jj', 'jj_03.mp4', '')
+    # faceit.add_video('jj', 'jj_04.mp4', '')
+    # faceit.add_video('jj', 'jj_05.mp4', '')
     
     faceit.add_video('roy', 'rw_10.mp4', '')
     faceit.add_video('roy', 'rw_09.mp4', '')
