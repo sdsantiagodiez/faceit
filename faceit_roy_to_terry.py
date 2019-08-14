@@ -344,16 +344,16 @@ if __name__ == '__main__':
     faceit.add_video('terry', 'terry_09.mp4', 'https://www.youtube.com/watch?v=Rrx_ie0VGI0')
     faceit.add_video('terry', 'terry_10.mp4', 'https://www.youtube.com/watch?v=bxk05rT7fVQ')
     
-    faceit.add_video('roy', 'rw_10.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_09.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_08.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_07.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_06.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_05.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_04.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_03.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_02.mp4', '')  # got it
-    faceit.add_video('roy', 'rw_01.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_10.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_09.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_08.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_07.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_06.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_05.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_04.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_03.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_02.mp4', '')  # got it
+    # faceit.add_video('roy', 'rw_01.mp4', '')  # got it
 
     FaceIt.add_model(faceit)
 
