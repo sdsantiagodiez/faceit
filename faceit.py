@@ -364,16 +364,16 @@ if __name__ == '__main__':
     faceit.add_video('benicio', 'benicio_usualsuspect.mp4', 'https://www.youtube.com/watch?v=zGt-aCQqfkA')
     faceit.add_video('benicio', 'benicio_vice.mp4', 'https://www.youtube.com/watch?v=9aRx0_mkh4o')
     
-    faceit.add_video('hp', 'hp_1_zf.mp4', '')  # got it
-    faceit.add_video('hp', 'hp_2_home-made-1.mov', '')  # got it
-    faceit.add_video('hp', 'hp_3_home-made-2.mov', '')  # got it
-    faceit.add_video('hp', 'hp_4_home-made-3.mov', '')  # got it
-    faceit.add_video('hp', 'hp_5_home-made-4.mov', '')  # got it
-    faceit.add_video('hp', 'hp_6_home-made-5.mov', '')  # got it
-    faceit.add_video('hp', 'hp_7_home-made-6.mov', '')  # got it
-    faceit.add_video('hp', 'hp_8_inside-tax-1.mp4', '')  # got it
-    faceit.add_video('hp', 'hp_9_inside-tax-2.mp4', '')  # got it
-    faceit.add_video('hp', 'hp_10_interview.mp4', '')  # got it
+    # faceit.add_video('hp', 'hp_1_zf.mp4', '')  # got it
+    # faceit.add_video('hp', 'hp_2_home-made-1.mov', '')  # got it
+    # faceit.add_video('hp', 'hp_3_home-made-2.mov', '')  # got it
+    # faceit.add_video('hp', 'hp_4_home-made-3.mov', '')  # got it
+    # faceit.add_video('hp', 'hp_5_home-made-4.mov', '')  # got it
+    # faceit.add_video('hp', 'hp_6_home-made-5.mov', '')  # got it
+    # faceit.add_video('hp', 'hp_7_home-made-6.mov', '')  # got it
+    # faceit.add_video('hp', 'hp_8_inside-tax-1.mp4', '')  # got it
+    # faceit.add_video('hp', 'hp_9_inside-tax-2.mp4', '')  # got it
+    # faceit.add_video('hp', 'hp_10_interview.mp4', '')  # got it
 
     #faceit.add_video('fallon', 'fallon_bank.mp4', 'https://www.youtube.com/watch?v=q-0hmYHWVgE')#deleted
     FaceIt.add_model(faceit)
